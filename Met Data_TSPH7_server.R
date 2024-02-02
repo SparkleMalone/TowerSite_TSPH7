@@ -52,7 +52,7 @@ append.Rda <- function(x, file) {
   save(list = c(old.objects, deparse(substitute(x))), file = file)
 }
 
-source( "/Volumes/MaloneLab/Flux Towers/Met_Functions.R")
+source( "Met_Functions.R")
 #save(list = c("x", "y"), file = "temp.Rda")
 #append.Rda(z, "temp.Rda")
 
@@ -119,7 +119,7 @@ file_list <- list.files(pattern="*.dat")
 t7.2017.12 <- ts7.met.import(file_list)
 
 ts7.2017 <- smartbind( t7.2017.1, t7.2017.4, t7.2017.5, t7.2017.6, t7.2017.5,t7.2017.8a, t7.2017.8b, t7.2017.9,t7.2017.10a,t7.2017.10b, t7.2017.11 , t7.2017.12)
-save(ts7.2017, file = "/Volumes/MaloneLab/FIU_Data_Sync/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_MET.RDATA")
+save(ts7.2017, file = "TS7_MET.RDATA")
 rm( t7.2017.1, t7.2017.4, t7.2017.5, t7.2017.6, t7.2017.5,t7.2017.8a, t7.2017.8b, t7.2017.10a,t7.2017.10b, t7.2017.11 , t7.2017.12)
 
 # 2018
@@ -180,7 +180,7 @@ file_list <- list.files(pattern="*.dat")
 t7.2018.12 <- ts7.met.import(file_list)
 
 ts7.2018 <- smartbind( t7.2018.2,t7.2018.3, t7.2018.4, t7.2018.5, t7.2018.6, t7.2018.7,t7.2018.8, t7.2018.9,t7.2018.10, t7.2018.11 , t7.2018.12)
-append.Rda(ts7.2018, "/Volumes/MaloneLab/FIU_Data_Sync/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_MET.RDATA")
+append.Rda(ts7.2018, "TS7_MET.RDATA")
 rm( t7.2018.2,t7.2018.3, t7.2018.4, t7.2018.5, t7.2018.6, t7.2018.7,t7.2018.8, t7.2018.9,t7.2018.10, t7.2018.11 , t7.2018.12)
 
 # 2019
@@ -241,7 +241,7 @@ file_list <- list.files(pattern="*.dat")
 t7.2019.12 <- ts7.met.import(file_list)
 
 ts7.2019 <- smartbind( t7.2019.1, t7.2019.2,t7.2019.3, t7.2019.4, t7.2019.5, t7.2019.6, t7.2019.7,t7.2019.8,t7.2019.10, t7.2019.11 , t7.2019.12)
-append.Rda(ts7.2019, "/Volumes/MaloneLab/FIU_Data_Sync/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_MET.RDATA")
+append.Rda(ts7.2019, "TS7_MET.RDATA")
 rm( t7.2019.1, t7.2019.2,t7.2019.3, t7.2019.4, t7.2019.5, t7.2019.6, t7.2019.7,t7.2019.8, t7.2019.9,t7.2019.10, t7.2019.11 , t7.2019.12)
 
 #2020 COVID-19
@@ -287,7 +287,7 @@ file_list <- list.files(pattern="*.dat")
 t7.2020.12b <- ts7.met.import(file_list)
 
 ts7.2020 <- smartbind( t7.2020.1, t7.2020.2, t7.2020.5, t7.2020.6, t7.2020.7, t7.2020.9, t7.2020.12a , t7.2020.12b)
-append.Rda(ts7.2020, "/Volumes/MaloneLab/FIU_Data_Sync/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_MET.RDATA")
+append.Rda(ts7.2020, "TS7_MET.RDATA")
 rm( t7.2020.1, t7.2020.2, t7.2020.5, t7.2020.6, t7.2020.7, t7.2020.9, t7.2020.12a , t7.2020.12b)
 
 # 2021
@@ -328,7 +328,7 @@ file_list <- list.files(pattern="*.dat")
 t7.2021.12 <- ts7.met.import(file_list)
 
 ts7.2021 <- smartbind( t7.2021.1, t7.2021.3, t7.2021.5, t7.2021.7, t7.2021.9, t7.2021.11, t7.2021.12)
-append.Rda(ts7.2021, "/Volumes/MaloneLab/FIU_Data_Sync/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_MET.RDATA")
+append.Rda(ts7.2021, "TS7_MET.RDATA")
 rm( t7.2021.1, t7.2021.3, t7.2021.5, t7.2021.7, t7.2021.9, t7.2021.11, t7.2021.12)
 
 #2022
@@ -367,11 +367,11 @@ setwd(return.2022)
 file_list <- list.files(pattern="*.dat")
 t7.2022.6 <- ts7.met.import(file_list)
 
-load("/Volumes/MaloneLab/FIU_Data_Sync/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_MET.RDATA")
+load("TS7_MET.RDATA")
 
 ts7.2022 <- smartbind( t7.2022.1, t7.2022.2, t7.2022.3, t7.2022.4, t7.2022.5, t7.2022.6 )
 
-append.Rda(ts7.2022, "/Volumes/MaloneLab/FIU_Data_Sync/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_MET.RDATA")
+append.Rda(ts7.2022, "TS7_MET.RDATA")
 
 rm( t7.2022.1, t7.2022.2, t7.2022.3, t7.2022.4, t7.2022.5, t7.2022.6)
 
@@ -396,11 +396,11 @@ file_list <- list.files(pattern="*.dat")
 t7.2023.3 <- ts7.met.import(file_list)
 
 
-load("/Volumes/MaloneLab/Flux Towers/TSPH7_server/TS7_MET.RDATA")
+load("TS7_MET.RDATA")
 
 ts7.2023 <- smartbind( t7.2023.1, t7.2023.2 , t7.2023.3)
 rm( t7.2023.1, t7.2023.2 , t7.2023.3)
-append.Rda(ts7.2023, "/Volumes/MaloneLab/Flux Towers/TSPH7_server/TS7_MET.RDATA")
+append.Rda(ts7.2023, "TS7_MET.RDATA")
 
 
 #............................................................................................................
@@ -408,7 +408,7 @@ append.Rda(ts7.2023, "/Volumes/MaloneLab/Flux Towers/TSPH7_server/TS7_MET.RDATA"
 
 ##### Processing Met Files ####
 rm(list=ls())
-load("/Volumes/MaloneLab/Flux Towers/TSPH7_server/TS7_MET.RDATA")
+load("TS7_MET.RDATA")
 # Combine all files into a single file.
 
 ts7 <- smartbind(ts7.2017, ts7.2018, ts7.2019, ts7.2020, ts7.2021, ts7.2022 , ts7.2023)
@@ -519,5 +519,5 @@ plot(TIMESTAMP, cm10_Avg) #
 
 ts7.met <- ts7.met.f
 
-save(ts7.met, file='/Volumes/MaloneLab/Flux Towers/TSPH7_server/TS7_MET_TOTAL_Clean.RDATA')
+save(ts7.met, file='TS7_MET_TOTAL_Clean.RDATA')
  
