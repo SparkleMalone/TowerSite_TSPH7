@@ -15,8 +15,8 @@ ts7.flux.2016 <- ts7.flux.import(files)
 ts7.flux.2016$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2016$date, ts7.flux.2016$time, sep=" "), tz = "EST", format= "%y/%m/%d %H:%M")
 attr(ts7.flux.2016$TIMESTAMP, 'tzone') = 'EST' # There was an issue with the time
 
-save(ts7.flux.2016, file="/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
-append.Rda(ts7.flux.2016 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")#rm(ts7.flux.2016 )
+save(ts7.flux.2016, file="TS7_flux_annual_raw.RDATA")
+append.Rda(ts7.flux.2016 , "TS7_flux_annual_raw.RDATA")#rm(ts7.flux.2016 )
 
 # 2017 Data:
 setwd('/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/EDDYPRO_DATA_TOWERS/T7_FLUX_EDDY_PRO_DATA/2017_DATA/JANUARY_2017_ALL_4-22-17')
@@ -79,8 +79,8 @@ ts7.flux.2017.12$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2017.12$date, ts7.flux.2
 ts7.flux.2017 <- smartbind( ts7.flux.2017.1, ts7.flux.2017.2, ts7.flux.2017.3, ts7.flux.2017.4, ts7.flux.2017.6,
                              ts7.flux.2017.7, ts7.flux.2017.8, ts7.flux.2017.9, ts7.flux.2017.10, ts7.flux.2017.11, ts7.flux.2017.12)
 
-load("/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA" )
-append.Rda(ts7.flux.2017 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+load("TS7_flux_annual_raw.RDATA" )
+append.Rda(ts7.flux.2017 , "TS7_flux_annual_raw.RDATA")
 
 rm( ts7.flux.2017.1, ts7.flux.2017.2, ts7.flux.2017.3, ts7.flux.2017.4, ts7.flux.2017.6,
     ts7.flux.2017.7, ts7.flux.2017.8, ts7.flux.2017.9, ts7.flux.2017.10, ts7.flux.2017.11, ts7.flux.2017.12)
@@ -150,7 +150,7 @@ ts7.flux.2018.12$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2018.12$date, ts7.flux.2
 
 ts7.flux.2018 <- smartbind( ts7.flux.2018.1, ts7.flux.2018.2, ts7.flux.2018.3, ts7.flux.2018.4, ts7.flux.2018.5, ts7.flux.2018.6,
                              ts7.flux.2018.7, ts7.flux.2018.8, ts7.flux.2018.9, ts7.flux.2018.10, ts7.flux.2018.11, ts7.flux.2018.12)
-append.Rda(ts7.flux.2018 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+append.Rda(ts7.flux.2018 , "TS7_flux_annual_raw.RDATA")
 
 rm( ts7.flux.2018.1, ts7.flux.2018.2, ts7.flux.2018.3, ts7.flux.2018.4, ts7.flux.2018.5, ts7.flux.2018.6,
     ts7.flux.2018.7, ts7.flux.2018.8, ts7.flux.2018.9, ts7.flux.2018.10, ts7.flux.2018.11, ts7.flux.2018.12)
@@ -219,7 +219,7 @@ ts7.flux.2019.12$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2019.12$date, ts7.flux.2
 
 ts7.flux.2019 <- smartbind( ts7.flux.2019.1, ts7.flux.2019.2, ts7.flux.2019.3, ts7.flux.2019.4, ts7.flux.2019.5,ts7.flux.2019.6,
                              ts7.flux.2019.7, ts7.flux.2019.8, ts7.flux.2019.9, ts7.flux.2019.10, ts7.flux.2019.11, ts7.flux.2019.12)
-append.Rda(ts7.flux.2019 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+append.Rda(ts7.flux.2019 , "TS7_flux_annual_raw.RDATA")
 
 rm( ts7.flux.2019.1, ts7.flux.2019.2, ts7.flux.2019.3, ts7.flux.2019.4, ts7.flux.2019.6,ts7.flux.2019.5,
     ts7.flux.2019.7, ts7.flux.2019.8, ts7.flux.2019.9, ts7.flux.2019.10, ts7.flux.2019.11, ts7.flux.2019.12)
@@ -288,7 +288,7 @@ ts7.flux.2020.12$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2020.12$date, ts7.flux.2
 
 ts7.flux.2020 <- smartbind( ts7.flux.2020.1, ts7.flux.2020.2, ts7.flux.2020.3, ts7.flux.2020.4, ts7.flux.2020.5,ts7.flux.2020.6,
                              ts7.flux.2020.7, ts7.flux.2020.8, ts7.flux.2020.9, ts7.flux.2020.10, ts7.flux.2020.11, ts7.flux.2020.12)
-append.Rda(ts7.flux.2020 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+append.Rda(ts7.flux.2020 , "TS7_flux_annual_raw.RDATA")
 
 rm( ts7.flux.2020.1, ts7.flux.2020.2, ts7.flux.2020.3, ts7.flux.2020.4, ts7.flux.2020.6,ts7.flux.2020.5,
     ts7.flux.2020.7, ts7.flux.2020.8, ts7.flux.2020.9, ts7.flux.2020.10, ts7.flux.2020.11, ts7.flux.2020.12)
@@ -360,7 +360,7 @@ ts7.flux.2021.12$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2021.12$date, ts7.flux.2
 ts7.flux.2021 <- smartbind( ts7.flux.2021.1, ts7.flux.2021.2, ts7.flux.2021.3, ts7.flux.2021.4, ts7.flux.2021.5,ts7.flux.2021.6,
                              ts7.flux.2021.7, ts7.flux.2021.8, ts7.flux.2021.9, ts7.flux.2021.10, ts7.flux.2021.11, ts7.flux.2021.12)
 
-append.Rda(ts7.flux.2021 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+append.Rda(ts7.flux.2021 , "TS7_flux_annual_raw.RDATA")
 
 rm( ts7.flux.2021.1, ts7.flux.2021.2, ts7.flux.2021.3, ts7.flux.2021.4, ts7.flux.2021.6,ts7.flux.2021.5,
     ts7.flux.2021.7, ts7.flux.2021.8, ts7.flux.2021.9, ts7.flux.2021.10, ts7.flux.2021.11, ts7.flux.2021.12)
@@ -428,8 +428,8 @@ ts7.flux.2022.11$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2022.11$date, ts7.flux.2
 ts7.flux.2022 <- smartbind( ts7.flux.2022.1, ts7.flux.2022.2, ts7.flux.2022.3, ts7.flux.2022.4, ts7.flux.2022.5,ts7.flux.2022.6,
                             ts7.flux.2022.7, ts7.flux.2022.8,  ts7.flux.2022.9,  ts7.flux.2022.10,  ts7.flux.2022.11)
 
-load( "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
-append.Rda(ts7.flux.2022 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+load( "TS7_flux_annual_raw.RDATA")
+append.Rda(ts7.flux.2022 , "TS7_flux_annual_raw.RDATA")
 
 
 rm( ts7.flux.2022.1, ts7.flux.2022.2, ts7.flux.2022.3, ts7.flux.2022.4, ts7.flux.2022.5,ts7.flux.2022.6,
@@ -460,10 +460,10 @@ ts7.flux.2023.4 <- ts7.flux.import(files)
 ts7.flux.2023.4$TIMESTAMP <- as.POSIXct(paste(ts7.flux.2023.4$date, ts7.flux.2023.4$time, sep=" "), tz = "EST", format="%Y-%m-%d %H:%M")
 
 
-load( "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+load( "TS7_flux_annual_raw.RDATA")
 ts7.flux.2023 <- smartbind( ts7.flux.2023.1, ts7.flux.2023.2, ts7.flux.2023.3, ts7.flux.2023.4)
 
-append.Rda(ts7.flux.2023 , "/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+append.Rda(ts7.flux.2023 , "TS7_flux_annual_raw.RDATA")
 
 rm( ts7.flux.2023.1, ts7.flux.2023.2, ts7.flux.2023.3, ts7.flux.2023.4)
 
@@ -471,7 +471,7 @@ rm( ts7.flux.2023.1, ts7.flux.2023.2, ts7.flux.2023.3, ts7.flux.2023.4)
 ######################## Processing  Flux Data #####################################
 
 # Import and concatenate .dat files in R.
-load("/Volumes/inwedata/WEEL/Tech/Data/EDDY_COVARIANCE_TOWERS_DATA/Processed Data (Sparkle)/TS7_flux_annual_raw.RDATA")
+load("TS7_flux_annual_raw.RDATA")
 library(gtools)
 
  # I am not using the 2016 data because it has the wrong time stamp...
